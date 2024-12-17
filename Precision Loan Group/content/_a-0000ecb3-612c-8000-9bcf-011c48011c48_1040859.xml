@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ed17-2eab-8000-9bd1-011c48011c48_1075782</versionUuid>
+    <rule>
+        <name>PLGRH_GetLoanApplicationInfo</name>
+        <uuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_1040859</uuid>
+        <description>Query to get all the loan application's information to pass into the loan</description>
+        <parentUuid>ea0f9505-4420-476a-9c46-268362a11e34</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>
+#"SYSTEM_SYSRULES_queryRecordType_v1"(
+  recordType: #"urn:appian:record-type:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418",
+  fields: {
+    #"urn:appian:record-relationship:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/10f1fc93-fc06-4a30-9fe2-8408e20401ea"
+  },
+  filters: #"SYSTEM_SYSRULES_queryLogicalExpression"(
+    operator: "AND",
+    filters: {
+      #"SYSTEM_SYSRULES_queryFilter"(
+        field: #"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/dcba627a-71ea-4969-b639-dfcce498b614",
+        operator: "=",
+        value: ri!loanId
+      )
+    },
+    ignoreFiltersWithEmptyValues: true
+  ),
+  pagingInfo: #"SYSTEM_SYSRULES_pagingInfo"(
+    startIndex: 1,
+    batchSize: 1
+  )
+).data</definition>
+        <namedTypedValue>
+            <name>loanId</name>
+            <type>
+                <name>int</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000ed17-2eab-8000-9bd1-011c48011c48_1075782"/>
+    </history>
+</contentHaul>

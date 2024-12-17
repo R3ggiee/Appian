@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recordTypeHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>95e9d86a-3bd5-408f-9e68-40e16377acdc</versionUuid>
+  <recordType a:uuid="1fbb5bab-6290-414d-8441-18e89ad9fe37" name="PLGRH Loan Status">
+    <a:pluralName>PLGRH Loan Statuses</a:pluralName>
+    <a:description>Contains the status options for Loans.</a:description>
+    <a:urlStub>Mwrxog</a:urlStub>
+    <a:source xsi:type="a:RecordsReplica"/>
+    <a:listViewTemplateExpr>#"SYSTEM_SYSRULES_recordGridField"(
+  columns: {
+    #"SYSTEM_SYSRULES_gridColumn"(
+      label: "Id",
+      sortField: #"urn:appian:record-field:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37/446530d5-92d8-4803-ac8b-86a49bc4bce5",
+      value: fv!row[#"urn:appian:record-field:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37/446530d5-92d8-4803-ac8b-86a49bc4bce5"],
+      align: "END"
+    ),
+    #"SYSTEM_SYSRULES_gridColumn"(
+      label: "Value",
+      sortField: #"urn:appian:record-field:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37/4c84593a-eb2f-4412-87f7-80eea82272ba",
+      value: #"SYSTEM_SYSRULES_linkField"(
+        links: {
+          #"SYSTEM_SYSRULES_recordLink"(
+            label: fv!row[#"urn:appian:record-field:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37/4c84593a-eb2f-4412-87f7-80eea82272ba"],
+            recordType: #"urn:appian:record-type:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37",
+            identifier: fv!identifier
+          )
+        }
+      )
+    ),
+    #"SYSTEM_SYSRULES_gridColumn"(
+      label: "Is Active",
+      sortField: #"urn:appian:record-field:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37/602c59b3-e855-4383-a1de-48ea222b74c2",
+      value: fv!row[#"urn:appian:record-field:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37/602c59b3-e855-4383-a1de-48ea222b74c2"]
+    ),
+    #"SYSTEM_SYSRULES_gridColumn"(
+      label: "Sort Order",
+      sortField: #"urn:appian:record-field:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37/47be5d1c-5e4c-4ccc-9f69-1dd6ad22f539",
+      value: fv!row[#"urn:appian:record-field:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37/47be5d1c-5e4c-4ccc-9f69-1dd6ad22f539"],
+      align: "END"
+    )
+  },
+  pageSize: 50,
+  shadeAlternateRows: true
+)</a:listViewTemplateExpr>
+    <a:detailViewCfg>
+      <a:nameExpr>#"SYSTEM_SYSRULES_rtd_getDefaultSummaryViewName"()</a:nameExpr>
+      <a:uiExpr/>
+      <a:visibilityExpr>=true()</a:visibilityExpr>
+      <a:urlStub>summary</a:urlStub>
+      <a:headerExpr/>
+      <a:recordActionLaunchType>DIALOG</a:recordActionLaunchType>
+      <a:recordUiSecurityType>EXPRESSION</a:recordUiSecurityType>
+    </a:detailViewCfg>
+    <a:isSystem>false</a:isSystem>
+    <a:dataSrcExpr/>
+    <a:facetsListExpr/>
+    <a:titleExpr>rv!record[#"urn:appian:record-field:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37/4c84593a-eb2f-4412-87f7-80eea82272ba"]</a:titleExpr>
+    <a:defaultFiltersExpr/>
+    <a:layoutType>GRID</a:layoutType>
+    <a:security>16383</a:security>
+    <a:hideLatestNews>false</a:hideLatestNews>
+    <a:hideNewsView>false</a:hideNewsView>
+    <a:hideRelatedActionsView>false</a:hideRelatedActionsView>
+    <a:isExportable>true</a:isExportable>
+    <a:listViewSrcExpr/>
+    <a:recordViewSrcExpr/>
+    <a:recordTypeSearchCfg>
+      <searchFieldsSrc>DEFAULT</searchFieldsSrc>
+      <placeholderSrc>DEFAULT</placeholderSrc>
+      <placeholder/>
+    </a:recordTypeSearchCfg>
+    <a:iconId/>
+    <a:listAutoRefreshInterval>0.0</a:listAutoRefreshInterval>
+    <a:sourceConfiguration>
+      <sourceUuid>PLGRH_LOAN_STATUS@jdbc/Appian</sourceUuid>
+      <sourceType>RDBMS_TABLE</sourceType>
+      <sourceSubType>NONE</sourceSubType>
+      <friendlyName>PLGRH_LOAN_STATUS</friendlyName>
+      <sourceFilterExpr/>
+      <field>
+        <uuid>446530d5-92d8-4803-ac8b-86a49bc4bce5</uuid>
+        <type>{http://www.appian.com/ae/types/2009}Integer</type>
+        <sourceFieldName>ID</sourceFieldName>
+        <sourceFieldType>INTEGER</sourceFieldType>
+        <fieldName>id</fieldName>
+        <displayName>Id</displayName>
+        <isRecordId>true</isRecordId>
+        <isUnique>true</isUnique>
+        <isCustomField>false</isCustomField>
+        <customFieldExpr/>
+        <customFieldDefaultValueStr>null</customFieldDefaultValueStr>
+        <fieldCalculationType>NA</fieldCalculationType>
+        <fieldTemplateType>NA</fieldTemplateType>
+        <isRollingSyncSortField>false</isRollingSyncSortField>
+        <recordFieldSecurityMembershipFilter/>
+      </field>
+      <field>
+        <uuid>4c84593a-eb2f-4412-87f7-80eea82272ba</uuid>
+        <type>{http://www.appian.com/ae/types/2009}Text</type>
+        <sourceFieldName>VALUE</sourceFieldName>
+        <sourceFieldType>VARCHAR(255)</sourceFieldType>
+        <fieldName>value</fieldName>
+        <displayName>Value</displayName>
+        <isRecordId>false</isRecordId>
+        <isUnique>false</isUnique>
+        <isCustomField>false</isCustomField>
+        <customFieldExpr/>
+        <customFieldDefaultValueStr>null</customFieldDefaultValueStr>
+        <fieldCalculationType>NA</fieldCalculationType>
+        <fieldTemplateType>NA</fieldTemplateType>
+        <isRollingSyncSortField>false</isRollingSyncSortField>
+        <recordFieldSecurityMembershipFilter/>
+      </field>
+      <field>
+        <uuid>602c59b3-e855-4383-a1de-48ea222b74c2</uuid>
+        <type>{http://www.appian.com/ae/types/2009}Boolean</type>
+        <sourceFieldName>IS_ACTIVE</sourceFieldName>
+        <sourceFieldType>BIT</sourceFieldType>
+        <fieldName>isActive</fieldName>
+        <displayName>Is Active</displayName>
+        <isRecordId>false</isRecordId>
+        <isUnique>false</isUnique>
+        <isCustomField>false</isCustomField>
+        <customFieldExpr/>
+        <customFieldDefaultValueStr>null</customFieldDefaultValueStr>
+        <fieldCalculationType>NA</fieldCalculationType>
+        <fieldTemplateType>NA</fieldTemplateType>
+        <isRollingSyncSortField>false</isRollingSyncSortField>
+        <recordFieldSecurityMembershipFilter/>
+      </field>
+      <field>
+        <uuid>47be5d1c-5e4c-4ccc-9f69-1dd6ad22f539</uuid>
+        <type>{http://www.appian.com/ae/types/2009}Integer</type>
+        <sourceFieldName>SORT_ORDER</sourceFieldName>
+        <sourceFieldType>INTEGER</sourceFieldType>
+        <fieldName>sortOrder</fieldName>
+        <displayName>Sort Order</displayName>
+        <isRecordId>false</isRecordId>
+        <isUnique>false</isUnique>
+        <isCustomField>false</isCustomField>
+        <customFieldExpr/>
+        <customFieldDefaultValueStr>null</customFieldDefaultValueStr>
+        <fieldCalculationType>NA</fieldCalculationType>
+        <fieldTemplateType>NA</fieldTemplateType>
+        <isRollingSyncSortField>false</isRollingSyncSortField>
+        <recordFieldSecurityMembershipFilter/>
+      </field>
+      <uuid>d2b912fe-ec66-49f4-9317-bf06d545df6d</uuid>
+      <refreshSchedule>
+        <frequency>DAILY</frequency>
+        <value>{"hour":3,"minute":"00","amPM":"AM","timeZone":"US/Eastern","version":"v1"}</value>
+        <activated>false</activated>
+      </refreshSchedule>
+      <skipFailureEnabled>true</skipFailureEnabled>
+      <recordIdGeneratorUuid/>
+    </a:sourceConfiguration>
+    <a:enabledFeatures>255</a:enabledFeatures>
+    <a:isVisibleInRecordTypeList>false</a:isVisibleInRecordTypeList>
+    <a:recordActionLaunchType>DIALOG</a:recordActionLaunchType>
+    <a:showSearchBox>true</a:showSearchBox>
+    <a:isVisibleInDataFabric>false</a:isVisibleInDataFabric>
+    <a:usesRollingSyncLimit>false</a:usesRollingSyncLimit>
+    <a:usesRecoverySync>false</a:usesRecoverySync>
+  </recordType>
+  <roleMap>
+    <role name="record_type_administrator">
+      <users/>
+      <groups>
+        <groupUuid>ad93c1d7-3a9c-4a6a-80eb-da5b5a3f51ad</groupUuid>
+        <groupUuid>_e-0000ecb3-610c-8000-9b1e-01075c01075c_4183</groupUuid>
+      </groups>
+    </role>
+    <role name="record_type_viewer">
+      <users/>
+      <groups>
+        <groupUuid>4e1f80bf-b452-4782-8d47-97d180cd9981</groupUuid>
+        <groupUuid>_e-0000ecb3-610c-8000-9b1e-01075c01075c_4187</groupUuid>
+        <groupUuid>_e-0000ecb3-610c-8000-9b1e-01075c01075c_4185</groupUuid>
+      </groups>
+    </role>
+  </roleMap>
+  <history>
+    <historyInfo versionUuid="95e9d86a-3bd5-408f-9e68-40e16377acdc"/>
+  </history>
+  <migrationVersion>1</migrationVersion>
+</recordTypeHaul>

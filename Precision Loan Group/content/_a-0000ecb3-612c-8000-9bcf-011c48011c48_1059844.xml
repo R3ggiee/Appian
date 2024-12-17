@@ -1,0 +1,449 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_1059863</versionUuid>
+    <interface>
+        <name>PLGRH_UpdateApplicant</name>
+        <uuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_1059844</uuid>
+        <description>Update applicant information</description>
+        <parentUuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_997497</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>a!localVariables(
+  local!applicantId: #"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/24fafca8-ef32-4bc9-90f0-e94acefa69a2",
+  local!file,
+  local!onSuccess,
+  local!proofOfIncome,
+  #"SYSTEM_SYSRULES_headerContentLayout"(
+    contents: {
+      #"SYSTEM_SYSRULES_columnsLayout"(
+        columns: {
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_sectionLayout_v1"(
+                label: "Photo Id",
+                labelIcon: "picture",
+                labelColor: "STANDARD",
+                contents: {
+                  #"SYSTEM_SYSRULES_sectionLayout_v1"(
+                    label: "",
+                    contents: {
+                      #"SYSTEM_SYSRULES_fileUploadField_v1"(
+                        label: "File Upload",
+                        labelPosition: "ABOVE",
+                        target: #"_a-0000ecb3-612c-8000-9bcf-011c48011c48_1031463",
+                        value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/a0f57c8b-deaa-4714-aac7-ae61c53854d4"],
+                        saveInto:ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/a0f57c8b-deaa-4714-aac7-ae61c53854d4"],
+                        required: true(),
+                        validations: {}
+                      )
+                    }
+                  ),
+                  {}
+                },
+                divider: "NONE",
+                dividerWeight: "THIN",
+                marginBelow: "NONE"
+              ),
+              #"SYSTEM_SYSRULES_sectionLayout_v1"(
+                label: "",
+                contents: {},
+                marginBelow: "MORE"
+              ),
+              #"SYSTEM_SYSRULES_sectionLayout_v1"(
+                label: "Proof of income",
+                labelIcon: "file-invoice-dollar",
+                labelColor: "STANDARD",
+                contents: {
+                  #"SYSTEM_SYSRULES_sectionLayout_v1"(
+                    label: "",
+                    contents: {
+                      #"SYSTEM_SYSRULES_fileUploadField_v1"(
+                        label: "File Upload",
+                        labelPosition: "ABOVE",
+                        target: #"_a-0000ecb3-612c-8000-9bcf-011c48011c48_1058929",
+                        value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/52088602-b6d9-4eea-9267-b8768a8d36fe"],
+                        saveInto:ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/52088602-b6d9-4eea-9267-b8768a8d36fe"],
+                        required: true(),
+                        validations: {}
+                      )
+                    }
+                  ),
+                  {}
+                },
+                divider: "NONE",
+                dividerWeight: "THIN",
+                marginBelow: "NONE"
+              )
+            },
+            width: "NARROW_PLUS"
+          ),
+          #"SYSTEM_SYSRULES_columnLayout"(contents: {}, width: "EXTRA_NARROW"),
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_sectionLayout_v1"(
+                label: "SIGN UP NOW",
+                labelSize: "LARGE",
+                labelHeadingTag: "H1",
+                labelColor: "STANDARD",
+                contents: {
+                  #"SYSTEM_SYSRULES_richTextDisplayField"(
+                    labelPosition: "COLLAPSED",
+                    value: {
+                      "Enter information in all required spots"
+                    },
+                    marginBelow: "STANDARD"
+                  )
+                },
+                divider: "BELOW",
+                marginAbove: "NONE",
+                marginBelow: "LESS"
+              ),
+              #"SYSTEM_SYSRULES_sectionLayout_v1"(
+                label: "Personal Information",
+                labelSize: "MEDIUM",
+                labelHeadingTag: "H2",
+                labelColor: "STANDARD",
+                contents: {
+                  #"SYSTEM_SYSRULES_columnsLayout"(
+                    columns: {
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "First Name",
+                            labelPosition: "ABOVE",
+                            placeholder: "",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/fb340a73-1c8c-46aa-a2b3-2b9caf4ac417"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/fb340a73-1c8c-46aa-a2b3-2b9caf4ac417"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      ),
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "Middle Name",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/f2f13322-1a63-4784-a404-21c851ad38c3"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/f2f13322-1a63-4784-a404-21c851ad38c3"],
+                            refreshAfter: "UNFOCUS",
+                            validations: {}
+                          )
+                        }
+                      ),
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "Last Name",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/16f800be-32ed-47f7-97bd-053f14a2129f"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/16f800be-32ed-47f7-97bd-053f14a2129f"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      ),
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "SSN",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/13dbbdd7-f92e-413f-b584-2e595dc738c8"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/13dbbdd7-f92e-413f-b584-2e595dc738c8"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      )
+                    },
+                    marginAbove: "STANDARD",
+                    marginBelow: "STANDARD",
+                    stackWhen: { "PHONE" }
+                  ),
+                  #"SYSTEM_SYSRULES_columnsLayout"(
+                    columns: {
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "Email Address",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/7c69d8b4-36a4-4641-bd8f-b45c49dd8c44"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/7c69d8b4-36a4-4641-bd8f-b45c49dd8c44"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      ),
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "Phone Number",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/71ef321e-9718-49c2-a462-5798e84f3741"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/71ef321e-9718-49c2-a462-5798e84f3741"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      ),
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_dateField"(
+                            label: "Date of birth",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/f8c9c3ad-9dca-4256-ad6d-28222c89fa45"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/f8c9c3ad-9dca-4256-ad6d-28222c89fa45"],
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      )
+                    },
+                    marginAbove: "STANDARD",
+                    marginBelow: "STANDARD",
+                    stackWhen: { "PHONE" }
+                  )
+                }
+              ),
+              #"SYSTEM_SYSRULES_sectionLayout_v1"(
+                label: "",
+                contents: {
+                  #"SYSTEM_SYSRULES_columnsLayout"(
+                    columns: {
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_dropdownField_v1"(
+                            data: #"urn:appian:record-type:v1:c8eba8ca-4833-469d-80f5-ddac4b4fa27d",
+                            choiceLabels: #"urn:appian:record-field:v1:c8eba8ca-4833-469d-80f5-ddac4b4fa27d/ca872efe-72ba-48e6-a8a6-c114e0a166f9",
+                            choiceValues: #"urn:appian:record-field:v1:c8eba8ca-4833-469d-80f5-ddac4b4fa27d/96a7f5a5-bfc5-446b-b7dd-a21c2e61a2be",
+                            label: "Dropdown",
+                            labelPosition: "ABOVE",
+                            placeholder: "--- Select a Value ---",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/09e1b46e-eed5-42e8-b3cf-10e052bca7ae"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/09e1b46e-eed5-42e8-b3cf-10e052bca7ae"],
+                            searchDisplay: "AUTO",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      ),
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_floatingPointField"(
+                            label: "Income",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/446453a3-697f-4116-a48d-c97fbf6e158f"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/446453a3-697f-4116-a48d-c97fbf6e158f"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      ),
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_integerField"(
+                            label: "Credit Score",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/7d1c0a6f-afb6-47db-adc7-d6e73c78ba72"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/7d1c0a6f-afb6-47db-adc7-d6e73c78ba72"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      )
+                    }
+                  )
+                }
+              ),
+              #"SYSTEM_SYSRULES_sectionLayout_v1"(
+                label: "Location",
+                labelSize: "MEDIUM",
+                labelHeadingTag: "H2",
+                labelColor: "STANDARD",
+                contents: {
+                  #"SYSTEM_SYSRULES_columnsLayout"(
+                    columns: {
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "Address Line 1",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/4ed575fe-4ad3-4786-b77a-c329e2e7bf0e"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/4ed575fe-4ad3-4786-b77a-c329e2e7bf0e"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      ),
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "Address Line 2",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/8864934a-2d4c-4408-9dea-6995d022b692"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/8864934a-2d4c-4408-9dea-6995d022b692"],
+                            refreshAfter: "UNFOCUS",
+                            validations: {}
+                          )
+                        }
+                      )
+                    },
+                    marginAbove: "STANDARD",
+                    marginBelow: "STANDARD",
+                    stackWhen: { "PHONE" }
+                  ),
+                  #"SYSTEM_SYSRULES_columnsLayout"(
+                    columns: {
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "City",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/400bafec-fa89-4931-8823-93eb3ef5980f"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/400bafec-fa89-4931-8823-93eb3ef5980f"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      ),
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "State",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/55f4f581-45bb-4f50-a8ae-3f9b86573e33"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/55f4f581-45bb-4f50-a8ae-3f9b86573e33"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      ),
+                      #"SYSTEM_SYSRULES_columnLayout"(
+                        contents: {
+                          #"SYSTEM_SYSRULES_textField"(
+                            label: "Zip code",
+                            labelPosition: "ABOVE",
+                            value: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/21b834e3-c320-4e1f-80b0-c5bc5ef69d86"],
+                            saveInto: ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/21b834e3-c320-4e1f-80b0-c5bc5ef69d86"],
+                            refreshAfter: "UNFOCUS",
+                            required: true,
+                            validations: {}
+                          )
+                        }
+                      )
+                    }
+                  ),
+                  #"SYSTEM_SYSRULES_ButtonLayout"(
+                    primaryButtons: #"SYSTEM_SYSRULES_buttonWidget_v1"(
+                      label: "Submit",
+                      recaptchaSaveInto: {
+                        a!save(
+                          ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/0e97ffff-f41e-4cf0-ad09-8e9b8839a8ac"],
+                          now()
+                        ),
+                        a!save(
+                          ri!record[#"urn:appian:record-field:v1:f0caae50-b06d-41f4-8067-5a2d7e324760/cbae2044-c345-4d3d-8193-349870cf2847"],
+                          loggedInUser()
+                        ),
+                        a!save(
+                          local!applicantId,
+                          #"urn:appian:record-type:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418"
+                        )
+                      },
+                      submit: true(),
+                      style: "SOLID"
+                    ),
+                    secondaryButtons: #"SYSTEM_SYSRULES_buttonWidget_v1"(
+                      label: "Cancel",
+                      saveInto: ri!cancel,
+                      style: "OUTLINE"
+                    )
+                  )
+                },
+                isCollapsible: false,
+                divider: "NONE",
+                marginAbove: "NONE"
+              )
+            },
+            width: "WIDE_PLUS"
+          ),
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {},
+            width: "NARROW"
+          )
+        },
+        stackWhen: {
+          "PHONE",
+          "TABLET_PORTRAIT",
+          "TABLET_LANDSCAPE"
+        }
+      )
+    },
+    backgroundColor: "#d3dab7"
+  )
+)</definition>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>record</name>
+            <type>
+                <name>f0caae50-b06d-41f4-8067-5a2d7e324760</name>
+                <namespace>urn:com:appian:recordtype:datatype</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <isCustom>false</isCustom>
+    </interface>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000ecb3-612c-8000-9bcf-011c48011c48_1059863"/>
+    </history>
+</contentHaul>

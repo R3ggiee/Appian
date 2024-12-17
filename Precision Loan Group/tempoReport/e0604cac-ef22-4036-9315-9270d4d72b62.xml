@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<tempoReportHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>e35fc8c4-410b-4929-a1e2-a556593142c7</versionUuid>
+    <tempoReport a:uuid="e0604cac-ef22-4036-9315-9270d4d72b62" name="PLGRH Reports">
+        <a:description></a:description>
+        <a:uiExpr>=#"_a-0000ecb3-612c-8000-9bcf-011c48011c48_1045714"()</a:uiExpr>
+        <a:urlStub>oeuGqw</a:urlStub>
+    </tempoReport>
+    <roleMap>
+        <role name="report_administrator">
+            <users/>
+            <groups>
+                <groupUuid>ad93c1d7-3a9c-4a6a-80eb-da5b5a3f51ad</groupUuid>
+            </groups>
+        </role>
+        <role name="report_viewer">
+            <users/>
+            <groups>
+                <groupUuid>4e1f80bf-b452-4782-8d47-97d180cd9981</groupUuid>
+                <groupUuid>_e-0000ecb3-610c-8000-9b1e-01075c01075c_4183</groupUuid>
+            </groups>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="e35fc8c4-410b-4929-a1e2-a556593142c7"/>
+    </history>
+</tempoReportHaul>

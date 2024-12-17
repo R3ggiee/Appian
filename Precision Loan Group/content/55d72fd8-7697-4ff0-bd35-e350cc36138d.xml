@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ed17-2eab-8000-9bd1-011c48011c48_1078253</versionUuid>
+    <interface>
+        <name>PLGRH_CreateLoan</name>
+        <uuid>55d72fd8-7697-4ff0-bd35-e350cc36138d</uuid>
+        <description>Form interface for creating new Loans as an action</description>
+        <parentUuid>ea0f9505-4420-476a-9c46-268362a11e34</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Create Loan",
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_floatingPointField"(
+              label: "Down Payment",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/b90fa095-629d-4fb5-8164-00bc28e6b935"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/b90fa095-629d-4fb5-8164-00bc28e6b935"],
+              required: false,
+              readOnly: true
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Term Months",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/ae3959dc-35eb-40f6-8c68-5bddaa6ae9b2"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/ae3959dc-35eb-40f6-8c68-5bddaa6ae9b2"],
+              required: false,
+              readOnly: true
+            ),
+            #"SYSTEM_SYSRULES_dateField"(
+              label: "End Date",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/49765a5c-2ff8-48d8-bd18-2a37d352d43f"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/49765a5c-2ff8-48d8-bd18-2a37d352d43f"],
+              required: false,
+              readOnly: true
+            ),
+            #"SYSTEM_SYSRULES_floatingPointField"(
+              label: "Monthly Payment",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/cbd6c1e5-29fb-49c2-8908-d63061f78c98"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/cbd6c1e5-29fb-49c2-8908-d63061f78c98"],
+              required: false,
+              readOnly: true
+            ),
+            #"SYSTEM_SYSRULES_pickerFieldRecords_v2"(
+              label: "Status",
+              labelPosition: "ABOVE",
+              placeholder: "Select a Status",
+              maxSelections: 1,
+              recordType: #"urn:appian:record-type:v1:1fbb5bab-6290-414d-8441-18e89ad9fe37",
+              value: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/1d7ac1af-97b1-4a30-a902-3f02e6b4e08e"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/1d7ac1af-97b1-4a30-a902-3f02e6b4e08e"]
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_floatingPointField"(
+              label: "Principle",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/c0b9755d-1952-42d4-be4d-8728fc9d4158"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/c0b9755d-1952-42d4-be4d-8728fc9d4158"],
+              required: false,
+              readOnly: true()
+            ),
+            #"SYSTEM_SYSRULES_dateField"(
+              label: "Start Date",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/0ef8ea42-7639-4ea9-9694-a518ba54adc3"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/0ef8ea42-7639-4ea9-9694-a518ba54adc3"],
+              required: false,
+              readOnly: true
+            ),
+            #"SYSTEM_SYSRULES_floatingPointField"(
+              label: "Interest Rate",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/040be3d6-1894-4124-8480-6a2694f23239"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/040be3d6-1894-4124-8480-6a2694f23239"],
+              required: false,
+              readOnly: true
+            ),
+            #"SYSTEM_SYSRULES_signatureField"(
+              labelPosition: "COLLAPSED",
+              target: #"_a-0000ed17-2eab-8000-9bd1-011c48011c48_1078157",
+              value: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/032b288a-ef2a-4619-9e63-f236a8f5887b"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/032b288a-ef2a-4619-9e63-f236a8f5887b"]
+            )
+          }
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Create",
+        saveInto: {
+          a!save(
+            target: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/56c2b5c0-d437-41e7-a442-76880a932ed1"],
+            value: loggedInUser()
+          ),
+          a!save(
+            target: ri!record[#"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/fa5ff6c3-37a8-479f-9f67-f815c3678628"],
+            value: now()
+          )
+          
+        },
+        submit: true,
+        style: "SOLID",
+        validate: true
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Cancel",
+        value: true,
+        saveInto: ri!cancel,
+        submit: true,
+        style: "OUTLINE",
+        validate: false
+      )
+    }
+  )
+)</definition>
+        <namedTypedValue>
+            <name>record</name>
+            <type>
+                <name>4d57cb9b-758b-414a-bb7f-696667786c37</name>
+                <namespace>urn:com:appian:recordtype:datatype</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>loanApp</name>
+            <type>
+                <name>e19b8d7e-e5ed-4f55-8419-5a751d4bb418</name>
+                <namespace>urn:com:appian:recordtype:datatype</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <isCustom>false</isCustom>
+    </interface>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="15a82f72-aad5-43f2-a6c2-6c5748756ad6"/>
+        <historyInfo versionUuid="_a-0000ed17-2eab-8000-9bd1-011c48011c48_1078253"/>
+    </history>
+</contentHaul>

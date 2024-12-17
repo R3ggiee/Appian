@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ed17-2eab-8000-9bd1-011c48011c48_1079032</versionUuid>
+    <interface>
+        <name>PLGRH_LoanAppplication</name>
+        <uuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_990387</uuid>
+        <description>A form for the loan application</description>
+        <parentUuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_997497</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(contents: {
+  #"SYSTEM_SYSRULES_sectionLayout_v1"(
+    label: "Loan Information",
+    labelSize: "MEDIUM",
+    labelHeadingTag: "H2",
+    labelColor: "STANDARD",
+    contents: {
+      #"SYSTEM_SYSRULES_columnsLayout"(
+        columns: {
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_pickerFieldRecords_v2"(
+                label: "Applicant Name",
+                labelPosition: "ABOVE",
+                recordType: #"urn:appian:record-type:v1:f0caae50-b06d-41f4-8067-5a2d7e324760",
+                value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/8bea3fe5-3a4d-43ed-a13c-561eca3bc31f"],
+                saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/8bea3fe5-3a4d-43ed-a13c-561eca3bc31f"],
+                openLinksIn: "NEW_TAB",
+                validations: {}
+              )
+            }
+          ),
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_floatingPointField"(
+                label: "Requested Amount",
+                labelPosition: "ABOVE",
+                value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/978ec0fd-03ff-4c02-87f0-80f79c33edec"],
+                saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/978ec0fd-03ff-4c02-87f0-80f79c33edec"],
+                refreshAfter: "UNFOCUS",
+                validations: {}
+              )
+            }
+          ),
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_integerField"(
+                label: "Requested term months",
+                labelPosition: "ABOVE",
+                value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/0a1a1cf3-09bb-42ef-aef1-70e9a69f8cdd"],
+                saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/0a1a1cf3-09bb-42ef-aef1-70e9a69f8cdd"],
+                refreshAfter: "UNFOCUS",
+                validations: {}
+              )
+            }
+          )
+        }
+      ),
+      #"SYSTEM_SYSRULES_columnsLayout"(
+        columns: {
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_floatingPointField"(
+                label: "Max Down Payment",
+                labelPosition: "ABOVE",
+                value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/7b4b181f-dbc8-4ec7-969c-4e9d369fc50e"],
+                saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/7b4b181f-dbc8-4ec7-969c-4e9d369fc50e"],
+                refreshAfter: "UNFOCUS",
+                validations: {}
+              )
+            }
+          ),
+          #"SYSTEM_SYSRULES_columnLayout"(
+            contents: {
+              #"SYSTEM_SYSRULES_dateField"(
+                label: "Requested Start Date",
+                labelPosition: "ABOVE",
+                value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/2c7f059e-133b-4827-b7e4-b0d10830f123"],
+                saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/2c7f059e-133b-4827-b7e4-b0d10830f123"],
+                validations: {}
+              )
+            }
+          ),
+          #"SYSTEM_SYSRULES_columnLayout"(contents: {
+  #"SYSTEM_SYSRULES_dropdownField_v1"(
+  data: #"urn:appian:record-type:v1:2003f0f7-db32-4600-98d7-3268b6a73570",
+  choiceLabels: #"urn:appian:record-field:v1:2003f0f7-db32-4600-98d7-3268b6a73570/d90eb3c9-0742-4965-87ee-cef8fe31b069",
+  choiceValues: #"urn:appian:record-field:v1:2003f0f7-db32-4600-98d7-3268b6a73570/a45b26f3-28c4-43bf-b359-63bf132a12bb",
+  label: "Type of Loan",
+  labelPosition: "ABOVE",
+  placeholder: "--- Select a Value ---",
+  value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/c9fab196-70a1-4714-abca-6eca57ff2da2"],
+  saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/c9fab196-70a1-4714-abca-6eca57ff2da2"],
+  searchDisplay: "AUTO",
+  validations: {}
+  )
+})
+        }
+      ),
+      #"SYSTEM_SYSRULES_sectionLayout_v1"(label: "", contents: {}),
+      #"SYSTEM_SYSRULES_sectionLayout_v1"(
+        label: "Purpose of Loan",
+        labelColor: "STANDARD",
+        contents: {
+          #"SYSTEM_SYSRULES_paragraphField"(
+            label: "Purpose",
+            labelPosition: "COLLAPSED",
+            value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/a0ce1409-e5da-4f9d-878f-2225cbf7bf91"],
+            saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/a0ce1409-e5da-4f9d-878f-2225cbf7bf91"],
+            refreshAfter: "UNFOCUS",
+            height: "MEDIUM",
+            validations: {}
+          )
+        }
+      )
+    }
+  )
+}, width: "WIDE_PLUS"),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_sectionLayout_v1"(
+              label: "Loan Officer",
+              labelSize: "MEDIUM",
+              labelHeadingTag: "H2",
+              labelColor: "STANDARD",
+              contents: {
+                #"SYSTEM_SYSRULES_pickerFieldUsers"(
+                  label: "User Picker",
+                  labelPosition: "ABOVE",
+                  value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/fb9dec83-2f33-468e-af63-d22a2a41d040"],
+                  readOnly: true,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_paragraphField"(
+                  label: "Paragraph",
+                  labelPosition: "ABOVE",
+                  value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/9e269558-aa10-4ee3-a33d-998cb71e52ad/875362d1-f3c6-4238-96b6-55478dd78f2f"],
+                  refreshAfter: "UNFOCUS",
+                  height: "MEDIUM",
+                  readOnly: true,
+                  validations: {}
+                )
+              }
+            )
+          },
+          showWhen: a!isNotNullOrEmpty(
+            ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/fb9dec83-2f33-468e-af63-d22a2a41d040"]
+          )
+        )
+      },
+      stackWhen: {
+        "PHONE",
+        "TABLET_PORTRAIT",
+        "TABLET_LANDSCAPE"
+      }
+    ),
+    #"SYSTEM_SYSRULES_ButtonLayout"(
+      primaryButtons: #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Submit",
+        icon: "arrow-circle-o-right",
+        iconPosition: "END",
+        saveInto: {
+          a!save(ri!createdOn, now()),
+          a!save(ri!createdBy, loggedInUser())
+          
+        },
+        submit: true,
+        style: "SOLID"
+      ),
+      secondaryButtons: #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Cancel",
+        icon: "times-circle-o",
+        saveInto: ri!cancel,
+        submit: true,
+        style: "OUTLINE"
+      )
+    )
+  }
+)</definition>
+        <namedTypedValue>
+            <name>record</name>
+            <description>Rule input that contains Loan Application Record Type</description>
+            <type>
+                <name>e19b8d7e-e5ed-4f55-8419-5a751d4bb418</name>
+                <namespace>urn:com:appian:recordtype:datatype</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>createdOn</name>
+            <description>Capture when the application was created on</description>
+            <type>
+                <name>dateTime</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>createdBy</name>
+            <description>Capture who submitted the application</description>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <isCustom>false</isCustom>
+    </interface>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <typedValue>
+        <type>
+            <name>RuleTestConfig?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:name/>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:Expression">null</a:value>
+                    <a:nameRef>record</a:nameRef>
+                    <a:id>1</a:id>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" xsi:type="xsd:boolean"/>
+                    <a:nameRef>cancel</a:nameRef>
+                    <a:id>2</a:id>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" xsi:type="xsd:dateTime"/>
+                    <a:nameRef>createdOn</a:nameRef>
+                    <a:id>3</a:id>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string"/>
+                    <a:nameRef>createdBy</a:nameRef>
+                    <a:id>4</a:id>
+                </a:ruleInputTestConfigs>
+                <a:assertions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="_a-0000ed17-2eab-8000-9bd1-011c48011c48_1079032"/>
+    </history>
+</contentHaul>

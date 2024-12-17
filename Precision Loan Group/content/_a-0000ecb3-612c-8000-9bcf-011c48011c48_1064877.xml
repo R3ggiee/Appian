@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ed17-2eab-8000-9bd1-011c48011c48_1078275</versionUuid>
+    <rule>
+        <name>PLGRH_LoanAppToLoan</name>
+        <uuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_1064877</uuid>
+        <description></description>
+        <parentUuid>ea0f9505-4420-476a-9c46-268362a11e34</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"urn:appian:record-type:v1:4d57cb9b-758b-414a-bb7f-696667786c37"(
+  #"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/62e36fac-896f-4062-ad06-477b461a6e4a": ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/8bea3fe5-3a4d-43ed-a13c-561eca3bc31f"],
+  #"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/d628803b-342b-41b1-97e6-010bd20787d7": ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/dcba627a-71ea-4969-b639-dfcce498b614"],
+  #"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/234396a7-e455-4490-85e0-c3f9f9cc25cd": ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/c9fab196-70a1-4714-abca-6eca57ff2da2"],
+  #"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/b90fa095-629d-4fb5-8164-00bc28e6b935": ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/7b4b181f-dbc8-4ec7-969c-4e9d369fc50e"],
+  #"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/0ef8ea42-7639-4ea9-9694-a518ba54adc3": ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/2c7f059e-133b-4827-b7e4-b0d10830f123"],
+  #"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/ae3959dc-35eb-40f6-8c68-5bddaa6ae9b2": ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/0a1a1cf3-09bb-42ef-aef1-70e9a69f8cdd"],
+  #"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/c0b9755d-1952-42d4-be4d-8728fc9d4158": ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/978ec0fd-03ff-4c02-87f0-80f79c33edec"],
+  #"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/49765a5c-2ff8-48d8-bd18-2a37d352d43f": addmonths(todatetime(ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/2c7f059e-133b-4827-b7e4-b0d10830f123"]), ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/0a1a1cf3-09bb-42ef-aef1-70e9a69f8cdd"]),
+  #"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/040be3d6-1894-4124-8480-6a2694f23239": #"_a-0000ecb3-612c-8000-9bcf-011c48011c48_1038213"(),
+  #"urn:appian:record-field:v1:4d57cb9b-758b-414a-bb7f-696667786c37/cbd6c1e5-29fb-49c2-8908-d63061f78c98": ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/978ec0fd-03ff-4c02-87f0-80f79c33edec"]/ ri!loanApp[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/0a1a1cf3-09bb-42ef-aef1-70e9a69f8cdd"]* #"_a-0000ecb3-612c-8000-9bcf-011c48011c48_1038213"()+100
+)</definition>
+        <namedTypedValue>
+            <name>loanApp</name>
+            <type>
+                <name>e19b8d7e-e5ed-4f55-8419-5a751d4bb418</name>
+                <namespace>urn:com:appian:recordtype:datatype</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>legacy</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+    </rule>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="_a-0000ed17-2eab-8000-9bd1-011c48011c48_1078275"/>
+    </history>
+</contentHaul>

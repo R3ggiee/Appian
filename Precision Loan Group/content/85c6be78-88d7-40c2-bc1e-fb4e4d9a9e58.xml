@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>9eb36dac-e604-4f9b-8140-5a27fe7f5e27</versionUuid>
+    <interface>
+        <name>PLGRH_CreateLoanApplication</name>
+        <uuid>85c6be78-88d7-40c2-bc1e-fb4e4d9a9e58</uuid>
+        <description>Form interface for creating new Loan Applications as an action</description>
+        <parentUuid>ea0f9505-4420-476a-9c46-268362a11e34</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Create Loan Application",
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_integerField"(
+              label: "Applicant Id",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/8bea3fe5-3a4d-43ed-a13c-561eca3bc31f"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/8bea3fe5-3a4d-43ed-a13c-561eca3bc31f"]
+            ),
+            #"SYSTEM_SYSRULES_floatingPointField"(
+              label: "Requested Amount",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/978ec0fd-03ff-4c02-87f0-80f79c33edec"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/978ec0fd-03ff-4c02-87f0-80f79c33edec"]
+            ),
+            #"SYSTEM_SYSRULES_floatingPointField"(
+              label: "Max Down Payment",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/7b4b181f-dbc8-4ec7-969c-4e9d369fc50e"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/7b4b181f-dbc8-4ec7-969c-4e9d369fc50e"]
+            ),
+            #"SYSTEM_SYSRULES_pickerFieldRecords_v2"(
+              label: "Loan Type",
+              labelPosition: "ABOVE",
+              placeholder: "Select a Loan Type",
+              maxSelections: 1,
+              recordType: #"urn:appian:record-type:v1:2003f0f7-db32-4600-98d7-3268b6a73570",
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/c9fab196-70a1-4714-abca-6eca57ff2da2"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/c9fab196-70a1-4714-abca-6eca57ff2da2"]
+            ),
+            #"SYSTEM_SYSRULES_pickerFieldRecords_v2"(
+              label: "Application Status",
+              labelPosition: "ABOVE",
+              placeholder: "Select a Application Status",
+              maxSelections: 1,
+              recordType: #"urn:appian:record-type:v1:04c05615-2105-41f4-a9c3-7b2c346fceba",
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/e8caa630-039f-49f8-a9f6-1a008549ea30"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/e8caa630-039f-49f8-a9f6-1a008549ea30"]
+            ),
+            #"SYSTEM_SYSRULES_dateTimeField"(
+              label: "Approved On",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/7dd12f29-09f1-4da8-ab0c-7e7aec42f34b"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/7dd12f29-09f1-4da8-ab0c-7e7aec42f34b"]
+            ),
+            #"SYSTEM_SYSRULES_pickerFieldUsers"(
+              label: "Account Manager",
+              labelPosition: "ABOVE",
+              maxSelections: 1,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/996c9c5a-1ca9-4b48-ae52-e4dd1fb0d64c"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/996c9c5a-1ca9-4b48-ae52-e4dd1fb0d64c"],
+              validations: {}
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_integerField"(
+              label: "Cosigner Id",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/f1a2014b-77b6-4517-b7dc-c8976086b365"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/f1a2014b-77b6-4517-b7dc-c8976086b365"]
+            ),
+            #"SYSTEM_SYSRULES_integerField"(
+              label: "Requested Term Months",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/0a1a1cf3-09bb-42ef-aef1-70e9a69f8cdd"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/0a1a1cf3-09bb-42ef-aef1-70e9a69f8cdd"]
+            ),
+            #"SYSTEM_SYSRULES_dateField"(
+              label: "Requested Start Date",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/2c7f059e-133b-4827-b7e4-b0d10830f123"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/2c7f059e-133b-4827-b7e4-b0d10830f123"]
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Purpose",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/a0ce1409-e5da-4f9d-878f-2225cbf7bf91"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/a0ce1409-e5da-4f9d-878f-2225cbf7bf91"],
+              characterLimit: 4000
+            ),
+            #"SYSTEM_SYSRULES_dateTimeField"(
+              label: "Verified On",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/d246e440-02bd-4e05-a7bf-b400f2fdefbc"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/d246e440-02bd-4e05-a7bf-b400f2fdefbc"]
+            ),
+            #"SYSTEM_SYSRULES_pickerFieldUsers"(
+              label: "Loan Officer",
+              labelPosition: "ABOVE",
+              maxSelections: 1,
+              value: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/fb9dec83-2f33-468e-af63-d22a2a41d040"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/fb9dec83-2f33-468e-af63-d22a2a41d040"],
+              validations: {}
+            )
+          }
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_sectionLayout_v1"(
+      label: "comments",
+      labelSize: "MEDIUM_PLUS",
+      labelColor: "STANDARD",
+      labelHeadingTag: "H2",
+      isCollapsible: false,
+      contents: {
+        #"SYSTEM_SYSRULES_gridLayout"(
+          labelPosition: "COLLAPSED",
+          height: "SHORT_PLUS",
+          shadeAlternateRows: true,
+          headerCells: {
+            #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Comment Id"),
+            #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Comment Type Id"),
+            #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Comment"),
+            #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Is Internal"),
+            #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Created By"),
+            #"SYSTEM_SYSRULES_gridLayoutHeaderCell"(label: "Created On"),
+            #"SYSTEM_SYSRULES_gridLayoutHeaderCell"()
+          },
+          columnConfigs: {
+            #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),
+            #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),
+            #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),
+            #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),
+            #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),
+            #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "DISTRIBUTE"),
+            #"SYSTEM_SYSRULES_gridLayoutColumnConfig"(width: "ICON")
+          },
+          rows: #"SYSTEM_SYSRULES_forEach"(
+            items: ri!record[#"urn:appian:record-relationship:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/9e269558-aa10-4ee3-a33d-998cb71e52ad"],
+            expression: #"SYSTEM_SYSRULES_gridRowLayout"(
+              id: fv!index,
+              contents: {
+                #"SYSTEM_SYSRULES_integerField"(
+                  readOnly: true,
+                  value: fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/61939bd3-5807-4c34-a7f5-d7a9a982285f"],
+                  saveInto: fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/61939bd3-5807-4c34-a7f5-d7a9a982285f"]
+                ),
+                #"SYSTEM_SYSRULES_integerField"(
+                  value: fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/ffdb6fc1-b099-4eca-8dd1-e30e54f72cb7"],
+                  saveInto: fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/ffdb6fc1-b099-4eca-8dd1-e30e54f72cb7"]
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  value: fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/875362d1-f3c6-4238-96b6-55478dd78f2f"],
+                  saveInto: fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/875362d1-f3c6-4238-96b6-55478dd78f2f"]
+                ),
+                #"SYSTEM_SYSRULES_checkboxField_v1"(
+                  labelPosition: "COLLAPSED",
+                  choiceLabels: { "" },
+                  choiceValues: { true },
+                  value: if(fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/3f0a4d51-5bd2-4f5e-aeb5-c70d968e4648"], true, null),
+                  saveInto: a!save(
+                    fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/3f0a4d51-5bd2-4f5e-aeb5-c70d968e4648"],
+                    if(isnull(save!value), false, true)
+                  )
+                ),
+                #"SYSTEM_SYSRULES_pickerFieldUsers"(
+                  maxSelections: 1,
+                  value: fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/289a42a1-ddac-4617-b141-ddfc724d6bd5"],
+                  saveInto: fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/289a42a1-ddac-4617-b141-ddfc724d6bd5"]
+                ),
+                #"SYSTEM_SYSRULES_dateTimeField"(
+                  value: fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/f43792c3-cdb2-4fe9-803b-0eeffa2a63c6"],
+                  saveInto: fv!item[#"urn:appian:record-field:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c/f43792c3-cdb2-4fe9-803b-0eeffa2a63c6"]
+                ),
+                #"SYSTEM_SYSRULES_imageField_v1"(
+                  size: "ICON",
+                  images: #"SYSTEM_SYSRULES_documentImage"(
+                    document: #"SYSTEM_SYSRULES_iconIndicator"(icon: "REMOVE"),
+                    altText: "Remove Row",
+                    link: #"SYSTEM_SYSRULES_dynamicLink"(
+                      value: fv!index,
+                      saveInto: {
+                        a!save(
+                          ri!record[#"urn:appian:record-relationship:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/9e269558-aa10-4ee3-a33d-998cb71e52ad"],
+                          remove(
+                            ri!record[#"urn:appian:record-relationship:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/9e269558-aa10-4ee3-a33d-998cb71e52ad"],
+                            save!value
+                          )
+                        )
+                      }
+                    )
+                  )
+                )
+              }
+            )
+          ),
+          addRowLink: #"SYSTEM_SYSRULES_dynamicLink"(
+            label: "Add Row",
+            value: {
+              #"urn:appian:record-relationship:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/9e269558-aa10-4ee3-a33d-998cb71e52ad": {
+                #"urn:appian:record-type:v1:edc8cec0-3497-485a-a3e3-97c91bf12a4c"()
+              }
+            },
+            saveInto: a!save(
+              ri!record[#"urn:appian:record-relationship:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/9e269558-aa10-4ee3-a33d-998cb71e52ad"],
+              append(
+                ri!record[#"urn:appian:record-relationship:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/9e269558-aa10-4ee3-a33d-998cb71e52ad"],
+                save!value
+              )
+            )
+          )
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Create",
+        submit: true,
+        validate: true,
+        saveInto: {
+          a!save(
+            target: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/c76d93c6-c9a6-497a-accf-7bd37da15df3"],
+            value: loggedInUser()
+          ),
+          a!save(
+            target: ri!record[#"urn:appian:record-field:v1:e19b8d7e-e5ed-4f55-8419-5a751d4bb418/53bf82b4-4389-41aa-8b57-109bf376c2fe"],
+            value: now()
+          )
+        },
+        style: "SOLID"
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Cancel",
+        value: true,
+        saveInto: ri!cancel,
+        submit: true,
+        style: "OUTLINE",
+        validate: false
+      )
+    }
+  )
+)</definition>
+        <namedTypedValue>
+            <name>record</name>
+            <type>
+                <name>e19b8d7e-e5ed-4f55-8419-5a751d4bb418</name>
+                <namespace>urn:com:appian:recordtype:datatype</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <isCustom>false</isCustom>
+    </interface>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="9eb36dac-e604-4f9b-8140-5a27fe7f5e27"/>
+    </history>
+</contentHaul>

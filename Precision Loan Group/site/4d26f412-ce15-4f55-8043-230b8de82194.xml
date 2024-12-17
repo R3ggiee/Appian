@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siteHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>18f721ad-2604-41af-8251-33ffcda15f58</versionUuid>
+  <site a:uuid="4d26f412-ce15-4f55-8043-230b8de82194" name="PLGRH Applicant Site">
+    <description>A site for applicants</description>
+    <urlStub>plgrh-applicantsite</urlStub>
+    <page a:uuid="3bf9fd3d-cc53-48cc-a0af-e6ff3f8e93b7">
+      <staticName>About</staticName>
+      <description/>
+      <urlStub>landing-page</urlStub>
+      <uiObject a:uuid="_a-0000ecb3-612c-8000-9bcf-011c48011c48_1072714" xsi:type="a:ContentFreeformRule"/>
+      <iconId>f015</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
+      <pageWidth>WIDE</pageWidth>
+      <areUrlParamsEncrypted>true</areUrlParamsEncrypted>
+      <autoContextUpdateEnabled>true</autoContextUpdateEnabled>
+    </page>
+    <page a:uuid="17a0802c-bcb5-430c-b94d-430ed8c546da">
+      <staticName>Applicants</staticName>
+      <description/>
+      <urlStub>applicants</urlStub>
+      <uiObject a:uuid="f0caae50-b06d-41f4-8067-5a2d7e324760" xsi:type="a:RecordType"/>
+      <iconId>f528</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
+      <pageWidth>WIDE</pageWidth>
+      <areUrlParamsEncrypted>true</areUrlParamsEncrypted>
+      <autoContextUpdateEnabled>true</autoContextUpdateEnabled>
+    </page>
+    <page a:uuid="2c41ac5f-6e2d-4814-afe8-dcba465583ce">
+      <staticName>Loan Applications</staticName>
+      <description/>
+      <urlStub>applicants-loan-applications</urlStub>
+      <uiObject a:uuid="e19b8d7e-e5ed-4f55-8419-5a751d4bb418" xsi:type="a:RecordType"/>
+      <iconId>f03a</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
+      <pageWidth>WIDE</pageWidth>
+      <areUrlParamsEncrypted>true</areUrlParamsEncrypted>
+      <autoContextUpdateEnabled>true</autoContextUpdateEnabled>
+    </page>
+    <visibility>268435456</visibility>
+    <headerBackgroundColor>#515151</headerBackgroundColor>
+    <selectedTabBackgroundColor>#546686</selectedTabBackgroundColor>
+    <faviconRef a:uuid="SYSTEM_CONTENT_SITES_DEFAULT_FAVICON" xsi:type="a:CollaborationDocument"/>
+    <logoRef a:uuid="_a-0000ecb3-612c-8000-9bcf-011c48011c48_1069268" xsi:type="a:CollaborationDocument"/>
+    <showName>false</showName>
+    <tempoLinkVisibility>HIDDEN</tempoLinkVisibility>
+    <showRecordNews>true</showRecordNews>
+    <tasksInSitesVisibility>HIDDEN</tasksInSitesVisibility>
+    <buttonShape>SQUARED</buttonShape>
+    <navigationBarStyle>SIDEBAR</navigationBarStyle>
+    <inputShape>SQUARED</inputShape>
+    <isSystem>false</isSystem>
+    <displayName>plgrh_Applicantsite</displayName>
+    <isStaticDisplayName>true</isStaticDisplayName>
+    <nameExprIsEvaluable>true</nameExprIsEvaluable>
+    <primaryNavLayoutType>SIDEBAR</primaryNavLayoutType>
+  </site>
+  <roleMap>
+    <role name="site_administrator">
+      <users/>
+      <groups>
+        <groupUuid>ad93c1d7-3a9c-4a6a-80eb-da5b5a3f51ad</groupUuid>
+      </groups>
+    </role>
+    <role name="site_viewer">
+      <users/>
+      <groups>
+        <groupUuid>4e1f80bf-b452-4782-8d47-97d180cd9981</groupUuid>
+      </groups>
+    </role>
+  </roleMap>
+  <history>
+    <historyInfo versionUuid="18f721ad-2604-41af-8251-33ffcda15f58"/>
+  </history>
+</siteHaul>
