@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<siteHaul xmlns:a="http://www.appian.com/ae/types/2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <versionUuid>36c87e00-fed2-4d62-a702-87e16b5e7cc0</versionUuid>
+  <site a:uuid="c3b6ad2b-fedf-46fb-b892-71402543f67a" name="MFA Anime">
+    <description>A site for anime</description>
+    <urlStub>anime-site</urlStub>
+    <page a:uuid="6a403a70-ec45-45c1-a7b7-5212586548bb">
+      <staticName>Records</staticName>
+      <description/>
+      <urlStub>records</urlStub>
+      <uiObject a:uuid="6763a637-a706-430a-833b-bcd056937644" xsi:type="a:RecordType"/>
+      <iconId>f016</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
+      <pageWidth>WIDE</pageWidth>
+      <areUrlParamsEncrypted>true</areUrlParamsEncrypted>
+      <autoContextUpdateEnabled>true</autoContextUpdateEnabled>
+    </page>
+    <page a:uuid="e5a93bd9-ce9e-475b-96a9-c703f340b245">
+      <staticName>Action</staticName>
+      <description/>
+      <urlStub>action</urlStub>
+      <uiObject a:uuid="75d5fd09-c1da-4413-8f99-2dbab3c38c7e" xsi:type="a:ProcessModel"/>
+      <iconId>f016</iconId>
+      <visibilityExpr>fn!true()</visibilityExpr>
+      <pageWidth>WIDE</pageWidth>
+      <areUrlParamsEncrypted>true</areUrlParamsEncrypted>
+      <autoContextUpdateEnabled>true</autoContextUpdateEnabled>
+    </page>
+    <visibility>268435456</visibility>
+    <selectedTabBackgroundColor>#4a86e8</selectedTabBackgroundColor>
+    <faviconRef a:uuid="SYSTEM_CONTENT_SITES_DEFAULT_FAVICON" xsi:type="a:CollaborationDocument"/>
+    <logoHref>https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSM2X8N2EB3tW5oXRHMbYW5ezL9uuHzlAosow&amp;s</logoHref>
+    <accentColor>#1155cc</accentColor>
+    <showName>false</showName>
+    <tempoLinkVisibility>HIDDEN</tempoLinkVisibility>
+    <showRecordNews>true</showRecordNews>
+    <tasksInSitesVisibility>HIDDEN</tasksInSitesVisibility>
+    <buttonShape>SQUARED</buttonShape>
+    <navigationBarStyle>STYLE2</navigationBarStyle>
+    <inputShape>SQUARED</inputShape>
+    <isSystem>false</isSystem>
+    <displayName>Anime site</displayName>
+    <isStaticDisplayName>true</isStaticDisplayName>
+    <nameExprIsEvaluable>true</nameExprIsEvaluable>
+    <primaryNavLayoutType>TOPBAR</primaryNavLayoutType>
+  </site>
+  <roleMap>
+    <role name="site_administrator">
+      <users/>
+      <groups>
+        <groupUuid>5b83a6a3-572f-474c-9f34-4f3f6c0c3ce9</groupUuid>
+      </groups>
+    </role>
+    <role name="site_viewer">
+      <users/>
+      <groups>
+        <groupUuid>be15a89d-cbd5-4e84-935e-e70d2bc2ccf2</groupUuid>
+      </groups>
+    </role>
+  </roleMap>
+  <history>
+    <historyInfo versionUuid="36c87e00-fed2-4d62-a702-87e16b5e7cc0"/>
+  </history>
+</siteHaul>

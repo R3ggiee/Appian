@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>2272074e-e93f-4f87-a17f-57c4035dc974</versionUuid>
+    <interface>
+        <name>MFA_DeleteStudio</name>
+        <uuid>a66883f7-00ed-498b-84ff-45dd59816170</uuid>
+        <description>Form interface for confirming the deletion of a record</description>
+        <parentUuid>8c4c3d2a-d85a-494a-8bdc-56449fd36d9b</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Delete Studio",
+  contents: {
+    #"SYSTEM_SYSRULES_paragraphField"(
+      labelPosition: "COLLAPSED",
+      readOnly: true,
+      value: "Submitting this form will delete your record. The data will no longer exist."
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Delete",
+        submit: true,
+        color: "NEGATIVE",
+        style: "GHOST"
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Cancel",
+        style: "OUTLINE",
+        value: true,
+        submit: true,
+        saveInto: ri!cancel,
+        validate: false
+      )
+    }
+  )
+)
+</definition>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <isCustom>false</isCustom>
+    </interface>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="2272074e-e93f-4f87-a17f-57c4035dc974"/>
+    </history>
+</contentHaul>

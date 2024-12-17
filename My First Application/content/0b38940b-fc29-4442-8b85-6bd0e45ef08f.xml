@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_989047</versionUuid>
+    <interface>
+        <name>MFA_CreateOrUpdateAnime</name>
+        <uuid>0b38940b-fc29-4442-8b85-6bd0e45ef08f</uuid>
+        <description>Form interface for creating or updating Animes as an action</description>
+        <parentUuid>8c4c3d2a-d85a-494a-8bdc-56449fd36d9b</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Title",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/73fd4270-4b45-4079-b138-f535eed897e6"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/73fd4270-4b45-4079-b138-f535eed897e6"],
+              characterLimit: 255,
+              required: false
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Description",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/461214f1-868f-465e-872f-ae1b301c14df"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/461214f1-868f-465e-872f-ae1b301c14df"],
+              characterLimit: 4000,
+              required: false
+            ),
+            #"SYSTEM_SYSRULES_dropdownField_v1"(
+              data: #"urn:appian:record-type:v1:2c7bb002-d92e-4b3a-8c58-a2a3cd7bc96c",
+              choiceLabels: #"urn:appian:record-field:v1:2c7bb002-d92e-4b3a-8c58-a2a3cd7bc96c/02aad12f-f656-46db-b969-005643ee9f22",
+              choiceValues: #"urn:appian:record-field:v1:2c7bb002-d92e-4b3a-8c58-a2a3cd7bc96c/f5199f6c-095a-4d0d-a51c-3fcd917500a8",
+              label: "Genre",
+              labelPosition: "ABOVE",
+              placeholder: "Select Genre",
+              value: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/92d8f86f-2f4d-43b9-a49f-3bca5ff180fd"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/92d8f86f-2f4d-43b9-a49f-3bca5ff180fd"],
+              searchDisplay: "AUTO",
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_integerField"(
+              label: "Episodes",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/b84d0fa1-0d21-4479-be0b-0bb0a17ab7e9"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/b84d0fa1-0d21-4479-be0b-0bb0a17ab7e9"],
+              required: false
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_dropdownField_v1"(
+              data: #"urn:appian:record-type:v1:5e3ec078-40fc-4581-a894-740414f69bcf",
+              choiceLabels: #"urn:appian:record-field:v1:5e3ec078-40fc-4581-a894-740414f69bcf/0ccf8391-1d75-4523-8963-c4c9cf465be6",
+              choiceValues: #"urn:appian:record-field:v1:5e3ec078-40fc-4581-a894-740414f69bcf/26647622-be0b-4ca0-9cd9-4afb08eff752",
+              label: "Author",
+              labelPosition: "ABOVE",
+              placeholder: "Select Author",
+              value: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/72f603df-3d50-4317-97dc-ab6d1b0ef8eb"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/72f603df-3d50-4317-97dc-ab6d1b0ef8eb"],
+              searchDisplay: "AUTO",
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_dropdownField_v1"(
+              data: #"urn:appian:record-type:v1:3d96ff7d-0324-4888-bd0d-6c739db19134",
+              choiceLabels: #"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/51d8a323-2933-4202-8d20-fae223ae86d8",
+              choiceValues: #"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/a685e6ab-c586-4d40-8853-a28967c8925c",
+              label: "Studio",
+              labelPosition: "ABOVE",
+              placeholder: "Select Studio",
+              value: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/d93a8621-b6f5-486d-961c-c2e70034a375"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/d93a8621-b6f5-486d-961c-c2e70034a375"],
+              searchDisplay: "AUTO",
+              validations: {}
+            ),
+            #"SYSTEM_SYSRULES_dateField"(
+              label: "Release Date",
+              labelPosition: "ABOVE",
+              value: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/007b732e-4daa-4645-9ef3-2e4f0f591131"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/007b732e-4daa-4645-9ef3-2e4f0f591131"],
+              required: false
+            )
+          }
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Submit",
+        saveInto: if(
+          true,
+          {
+            a!save(
+              target: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/1af5c719-dafe-4136-a22c-6b6e8c4b5b11"],
+              value: loggedInUser()
+            ),
+            a!save(
+              target: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/22322958-1a7e-4d62-8c2c-45e4c5f79b5f"],
+              value: now()
+            )
+          },
+          {
+            a!save(
+              target: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/2d70f776-051e-41ec-9262-0e574b6fa7d1"],
+              value: loggedInUser()
+            ),
+            a!save(
+              target: ri!record[#"urn:appian:record-field:v1:6763a637-a706-430a-833b-bcd056937644/09e2449a-c1fc-4cdd-bfe9-f70cfe293035"],
+              value: now()
+            )
+          }
+        ), /*end of if statememntn*/
+        submit: true,
+        style: "SOLID",
+        validate: true
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Cancel",
+        value: true,
+        saveInto: ri!cancel,
+        submit: true,
+        style: "OUTLINE",
+        validate: false
+      )
+    }
+  )
+)</definition>
+        <namedTypedValue>
+            <name>record</name>
+            <type>
+                <name>6763a637-a706-430a-833b-bcd056937644</name>
+                <namespace>urn:com:appian:recordtype:datatype</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <isCustom>false</isCustom>
+    </interface>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="edc88f6d-4fde-4d6d-8d00-dd8d7ba189f9"/>
+        <historyInfo versionUuid="_a-0000ecb3-612c-8000-9bcf-011c48011c48_989047"/>
+    </history>
+</contentHaul>

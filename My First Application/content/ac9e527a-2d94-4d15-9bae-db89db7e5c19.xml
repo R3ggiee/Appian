@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>4f1b46ac-6c42-4766-b37b-b6304838dd3f</versionUuid>
+    <interface>
+        <name>MFA_CreateOrUpdateStudio</name>
+        <uuid>ac9e527a-2d94-4d15-9bae-db89db7e5c19</uuid>
+        <description>Form interface for creating or updating Studios as an action</description>
+        <parentUuid>8c4c3d2a-d85a-494a-8bdc-56449fd36d9b</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: if(
+    ri!isUpdate,
+    "Update Studio",
+    "Create Studio"
+  ),
+  contents: {
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Studio Name",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/51d8a323-2933-4202-8d20-fae223ae86d8"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/51d8a323-2933-4202-8d20-fae223ae86d8"],
+              characterLimit: 255
+            ),
+            #"SYSTEM_SYSRULES_dateField"(
+              label: "Studio Founded",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/faaa9f1e-9cf5-4bc3-8b26-ecc60d8bb870"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/faaa9f1e-9cf5-4bc3-8b26-ecc60d8bb870"]
+            ),
+            #"SYSTEM_SYSRULES_integerField"(
+              label: "Employees",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/b79ebfa3-742f-4946-8b4f-eb4b87ccb08c"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/b79ebfa3-742f-4946-8b4f-eb4b87ccb08c"]
+            )
+          }
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Studio Founder",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/5b3f6d44-66f5-4cee-a38c-a91e4c36da21"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/5b3f6d44-66f5-4cee-a38c-a91e4c36da21"],
+              characterLimit: 255
+            ),
+            #"SYSTEM_SYSRULES_textField"(
+              label: "Location",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/552a0f70-caf4-4f9e-83f9-fa4710d5afb9"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/552a0f70-caf4-4f9e-83f9-fa4710d5afb9"],
+              characterLimit: 255
+            ),
+            #"SYSTEM_SYSRULES_integerField"(
+              label: "Author Id",
+              labelPosition: "ABOVE",
+              required: false,
+              value: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/aa5bb080-eeaa-4eaf-8ac3-69a363c31b23"],
+              saveInto: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/aa5bb080-eeaa-4eaf-8ac3-69a363c31b23"]
+            )
+          }
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: if(ri!isUpdate, "Save", "Create"),
+        submit: true,
+        validate: true,
+        saveInto: if(
+          ri!isUpdate,
+          {
+            a!save(
+              target: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/05fb422a-38c8-427b-991b-069cd6468408"],
+              value: loggedInUser()
+            ),
+            a!save(
+              target: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/880479ee-2c2d-495c-81cc-97faad26f8c0"],
+              value: now()
+            )
+          },
+          {
+            a!save(
+              target: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/d7fa7e0a-2df4-4053-96a4-07e0d4af778c"],
+              value: loggedInUser()
+            ),
+            a!save(
+              target: ri!record[#"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/e2713478-7e71-4b93-97a8-555771376fc9"],
+              value: now()
+            )
+          }
+        ),
+        style: "SOLID"
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Cancel",
+        value: true,
+        saveInto: ri!cancel,
+        submit: true,
+        style: "OUTLINE",
+        validate: false
+      )
+    }
+  )
+)</definition>
+        <namedTypedValue>
+            <name>record</name>
+            <type>
+                <name>3d96ff7d-0324-4888-bd0d-6c739db19134</name>
+                <namespace>urn:com:appian:recordtype:datatype</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>isUpdate</name>
+            <description>Tracks whether this form is being used to create a new record or update an existing one</description>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <isCustom>false</isCustom>
+    </interface>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <history>
+        <historyInfo versionUuid="4f1b46ac-6c42-4766-b37b-b6304838dd3f"/>
+    </history>
+</contentHaul>

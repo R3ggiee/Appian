@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_981551</versionUuid>
+    <interface>
+        <name>MFA_InterfaceDemo</name>
+        <uuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_975493</uuid>
+        <description>Demo interface for Anime</description>
+        <parentUuid>8c4c3d2a-d85a-494a-8bdc-56449fd36d9b</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_headerContentLayout"(
+  header: {
+    #"SYSTEM_SYSRULES_billboardLayout_v1"(
+      backgroundMedia: #"SYSTEM_SYSRULES_documentImage"(
+        document: #"SYSTEM_SYSRULES_EXAMPLE_BILLBOARD_IMAGE"()
+      ),
+      backgroundMediaPositionVertical: "BOTTOM",
+      backgroundColor: "#f0f0f0",
+      marginBelow: "NONE",
+      overlay: #"SYSTEM_SYSRULES_barOverlay"(
+        contents: {}
+      )
+    )
+  },
+  contents: {
+    #"SYSTEM_SYSRULES_sectionLayout_v1"(
+      label: "Anime",
+      labelIcon: "skull-crossbones",
+      contents: {
+        #"SYSTEM_SYSRULES_columnsLayout"(
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Author",
+                  labelPosition: "ADJACENT",
+                  refreshAfter: "UNFOCUS",
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dateField"(
+                  label: "Author's birthdate",
+                  labelPosition: "ADJACENT",
+                  validations: {},
+                  align: "LEFT"
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Title",
+                  labelPosition: "ADJACENT",
+                  refreshAfter: "UNFOCUS",
+                  requiredMessage: "",
+                  readOnly: false,
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Studio",
+                  labelPosition: "ADJACENT",
+refreshAfter: "UNFOCUS",
+                  validations: {}
+                )
+              }
+            ),
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_integerField"(
+                  label: "Episodes",
+                  labelPosition: "ADJACENT",
+                  refreshAfter: "UNFOCUS",
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dropdownField_v1"(
+
+                  label: "Genres",
+                  labelPosition: "ADJACENT",
+                  placeholder: "--- Select a Value ---",
+                  searchDisplay: "AUTO",
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_dateField"(
+                  label: "Release Date",
+                  labelPosition: "ADJACENT",
+                  validations: {}
+                )
+              }
+            ),
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_paragraphField"(
+                  label: "Biography",
+                  labelPosition: "ABOVE",
+                  refreshAfter: "UNFOCUS",
+                  height: "MEDIUM",
+                  validations: {}
+                )
+              }
+            )
+          }
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {}
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {}
+        ),
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {}
+        )
+      }
+    ),
+    #"SYSTEM_SYSRULES_columnsLayout"(
+      columns: {
+        #"SYSTEM_SYSRULES_columnLayout"(
+          contents: {
+            #"SYSTEM_SYSRULES_sectionLayout_v1"(
+              label: "Section",
+              contents: {
+                #"SYSTEM_SYSRULES_columnsLayout"(
+                  columns: {
+                    #"SYSTEM_SYSRULES_columnLayout"(
+                      contents: {
+                        #"SYSTEM_SYSRULES_lineChartField_v1"(
+                          label: "Number of viewers",
+                          labelPosition: "ABOVE",
+                          categories: {
+                            "1990",
+                            "1995",
+                            "2000",
+                            "2005",
+                            "2010",
+                            "2015",
+                            "2020"
+                          },
+                          series: {
+                            #"SYSTEM_SYSRULES_chartSeries"(
+                              label: "Growth of viewers",
+                              data: { 1000, 2000, 3000, 4000, 5000, 6000, 7000 }
+                            )
+                          },
+                          xAxisTitle: "Years",
+                          yAxisTitle: "Viewers",
+                          showLegend: true,
+                          showTooltips: true,
+                          allowDecimalAxisLabels: false,
+                          connectNulls: false,
+                          accessibilityText: "",
+                          allowImageDownload: true,
+                          showWhen: true,
+                          colorScheme: "SUNSET",
+                          height: "MEDIUM",
+                          xAxisStyle: "STANDARD",
+                          yAxisStyle: "STANDARD"
+                        )
+                      }
+                    ),
+                    #"SYSTEM_SYSRULES_columnLayout"(
+                      contents: {
+                        #"SYSTEM_SYSRULES_pieChartField"(
+                          label: "Viewers demand",
+                          labelPosition: "ABOVE",
+                          instructions: "",
+                          helpTooltip: "",
+                          series: {
+                            #"SYSTEM_SYSRULES_chartSeries"(
+                              label: "Continuation of the show",
+                              data: 1
+                            ),
+                            #"SYSTEM_SYSRULES_chartSeries"(label: "Character backstories", data: 2),
+                            #"SYSTEM_SYSRULES_chartSeries"(
+                              label: "Power scaling and unique abilities",
+                              data: 3
+                            ),
+                            #"SYSTEM_SYSRULES_chartSeries"(
+                              label: "individual character arcs",
+                              data: 4
+                            )
+                          },
+                          showDataLabels: false,
+                          showTooltips: false,
+                          showAsPercentage: false,
+                          allowImageDownload: true,
+                          colorScheme: "SUNSET",
+                          style: "PIE",
+                          seriesLabelStyle: "LEGEND",
+                          height: "MEDIUM",
+                          refreshAlways: false
+                        )
+                      }
+                    )
+                  }
+                )
+              }
+            )
+          }
+        )
+      }
+    )
+  }
+)</definition>
+        <namedTypedValue>
+            <name>Anime</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>studio</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>Author</name>
+            <type>
+                <name>string</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+            <value/>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <isCustom>false</isCustom>
+    </interface>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <typedValue>
+        <type>
+            <name>RuleTestConfig?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:name/>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:Expression">null</a:value>
+                    <a:nameRef>Anime</a:nameRef>
+                    <a:id>1</a:id>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:Expression">null</a:value>
+                    <a:nameRef>studio</a:nameRef>
+                    <a:id>2</a:id>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string"/>
+                    <a:nameRef>Author</a:nameRef>
+                    <a:id>4</a:id>
+                </a:ruleInputTestConfigs>
+                <a:assertions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="_a-0000ecb3-612c-8000-9bcf-011c48011c48_981551"/>
+    </history>
+</contentHaul>

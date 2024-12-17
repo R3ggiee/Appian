@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<contentHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_987093</versionUuid>
+    <interface>
+        <name>MFA_CreateOrUpdateAuthor</name>
+        <uuid>_a-0000ecb3-612c-8000-9bcf-011c48011c48_987051</uuid>
+        <description>An interface to create or update an author</description>
+        <parentUuid>8c4c3d2a-d85a-494a-8bdc-56449fd36d9b</parentUuid>
+        <visibility>
+            <advertise>false</advertise>
+            <hierarchy>true</hierarchy>
+            <indexable>true</indexable>
+            <quota>false</quota>
+            <searchable>true</searchable>
+            <system>false</system>
+            <unlogged>false</unlogged>
+        </visibility>
+        <definition>#"SYSTEM_SYSRULES_formLayout_v1"(
+  label: "Form",
+  contents: {
+    #"SYSTEM_SYSRULES_sectionLayout_v1"(
+      contents: {
+        #"SYSTEM_SYSRULES_columnsLayout"(
+          columns: {
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "First name",
+                  labelPosition: "ADJACENT",
+                  value: ri!record[#"urn:appian:record-field:v1:5e3ec078-40fc-4581-a894-740414f69bcf/0ccf8391-1d75-4523-8963-c4c9cf465be6"],
+                  saveInto: ri!record[#"urn:appian:record-field:v1:5e3ec078-40fc-4581-a894-740414f69bcf/0ccf8391-1d75-4523-8963-c4c9cf465be6"],
+                  refreshAfter: "UNFOCUS",
+                  validations: {}
+                ),
+                #"SYSTEM_SYSRULES_textField"(
+                  label: "Last Name",
+                  labelPosition: "ADJACENT",
+                  placeholder: "",
+                  value: ri!record[#"urn:appian:record-field:v1:5e3ec078-40fc-4581-a894-740414f69bcf/0aa74e04-f38e-47b9-8619-0305054ccb53"],
+                  saveInto: ri!record[#"urn:appian:record-field:v1:5e3ec078-40fc-4581-a894-740414f69bcf/0aa74e04-f38e-47b9-8619-0305054ccb53"],
+                  refreshAfter: "UNFOCUS",
+                  validations: {},
+                  align: "LEFT"
+                ),
+                #"SYSTEM_SYSRULES_dropdownField_v1"(
+                  data: #"urn:appian:record-type:v1:3d96ff7d-0324-4888-bd0d-6c739db19134",
+                  choiceLabels: #"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/51d8a323-2933-4202-8d20-fae223ae86d8",
+                  choiceValues: #"urn:appian:record-field:v1:3d96ff7d-0324-4888-bd0d-6c739db19134/a685e6ab-c586-4d40-8853-a28967c8925c",
+                  label: "Studio",
+                  labelPosition: "ADJACENT",
+                  placeholder: "--- Select a Studio---",
+                  value: ri!record[#"urn:appian:record-field:v1:5e3ec078-40fc-4581-a894-740414f69bcf/3180e2c7-9001-4acd-aaee-b77f8fd90f8e"],
+                  saveInto: ri!record[#"urn:appian:record-field:v1:5e3ec078-40fc-4581-a894-740414f69bcf/3180e2c7-9001-4acd-aaee-b77f8fd90f8e"],
+                  searchDisplay: "AUTO",
+                  validations: {}
+                )
+              }
+            ),
+            #"SYSTEM_SYSRULES_columnLayout"(
+              contents: {
+                #"SYSTEM_SYSRULES_paragraphField"(
+                  label: "Bio",
+                  labelPosition: "ADJACENT",
+                  value: ri!record[#"urn:appian:record-field:v1:5e3ec078-40fc-4581-a894-740414f69bcf/a2376b49-dccd-4466-93cb-ee54ef6335bb"],
+                  saveInto: ri!record[#"urn:appian:record-field:v1:5e3ec078-40fc-4581-a894-740414f69bcf/a2376b49-dccd-4466-93cb-ee54ef6335bb"],
+                  refreshAfter: "UNFOCUS",
+                  height: "MEDIUM",
+                  validations: {}
+                )
+              }
+            )
+          }
+        )
+      }
+    )
+  },
+  buttons: #"SYSTEM_SYSRULES_ButtonLayout"(
+    primaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Submit",
+        submit: true,
+        style: "SOLID"
+      )
+    },
+    secondaryButtons: {
+      #"SYSTEM_SYSRULES_buttonWidget_v1"(
+        label: "Cancel",
+        value: true,
+        saveInto: ri!cancel,
+        submit: true,
+        style: "OUTLINE",
+        validate: false
+      )
+    }
+  )
+)</definition>
+        <namedTypedValue>
+            <name>record</name>
+            <type>
+                <name>5e3ec078-40fc-4581-a894-740414f69bcf</name>
+                <namespace>urn:com:appian:recordtype:datatype</namespace>
+            </type>
+        </namedTypedValue>
+        <namedTypedValue>
+            <name>cancel</name>
+            <type>
+                <name>boolean</name>
+                <namespace>http://www.w3.org/2001/XMLSchema</namespace>
+            </type>
+        </namedTypedValue>
+        <preferredEditor>interface</preferredEditor>
+        <offlineEnabled>false</offlineEnabled>
+        <isCustom>false</isCustom>
+    </interface>
+    <roleMap public="true">
+        <role inherit="true" allowForAll="false" name="readers">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="authors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="true" allowForAll="false" name="administrators">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyReaders">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAuthors">
+            <users/>
+            <groups/>
+        </role>
+        <role inherit="false" allowForAll="false" name="denyAdministrators">
+            <users/>
+            <groups/>
+        </role>
+    </roleMap>
+    <typedValue>
+        <type>
+            <name>RuleTestConfig?list</name>
+            <namespace>http://www.appian.com/ae/types/2009</namespace>
+        </type>
+        <value>
+            <el>
+                <a:name/>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="a:Expression">null</a:value>
+                    <a:nameRef>record</a:nameRef>
+                    <a:id>1</a:id>
+                </a:ruleInputTestConfigs>
+                <a:ruleInputTestConfigs>
+                    <a:value xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true" xsi:type="xsd:boolean"/>
+                    <a:nameRef>cancel</a:nameRef>
+                    <a:id/>
+                </a:ruleInputTestConfigs>
+                <a:assertions xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true"/>
+            </el>
+        </value>
+    </typedValue>
+    <history>
+        <historyInfo versionUuid="_a-0000ecb3-612c-8000-9bcf-011c48011c48_987093"/>
+    </history>
+</contentHaul>

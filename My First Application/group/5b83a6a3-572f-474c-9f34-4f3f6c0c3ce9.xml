@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<groupHaul xmlns:a="http://www.appian.com/ae/types/2009">
+    <versionUuid>5b83a6a3-572f-474c-9f34-4f3f6c0c3ce9</versionUuid>
+    <group>
+        <name>MFA Administrators1</name>
+        <securityMap>SECURITYMAP_TEAM</securityMap>
+        <uuid>5b83a6a3-572f-474c-9f34-4f3f6c0c3ce9</uuid>
+        <groupTypeUuid>SYSTEM_GROUP_TYPE_CUSTOM</groupTypeUuid>
+        <description>Assigns Administrator permissions to users for objects in the application</description>
+        <delegatedCreation>false</delegatedCreation>
+        <memberPolicy>MEMBERPOLICY_CLOSED</memberPolicy>
+        <viewingPolicy>VIEWINGPOLICY_LOW</viewingPolicy>
+        <attributes/>
+    </group>
+    <members>
+        <users/>
+        <groups>
+            <groupUuid>_e-0000ecb3-610c-8000-9b1e-01075c01075c_4084</groupUuid>
+        </groups>
+    </members>
+    <admins>
+        <users/>
+        <groups>
+            <groupUuid>5b83a6a3-572f-474c-9f34-4f3f6c0c3ce9</groupUuid>
+        </groups>
+    </admins>
+    <ruleSet/>
+    <history>
+        <historyInfo versionUuid="5b83a6a3-572f-474c-9f34-4f3f6c0c3ce9"/>
+    </history>
+</groupHaul>
